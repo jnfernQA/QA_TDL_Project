@@ -16,3 +16,11 @@ body{
     background-color: rgb(127, 229, 255);
 }
 
+.back, #displayBox,#diplayboxAll, #info{
+    padding:50px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius:30px
+}
+
+
