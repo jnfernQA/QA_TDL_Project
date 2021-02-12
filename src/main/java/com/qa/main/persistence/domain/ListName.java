@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class List {
+public class ListName {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,16 +17,16 @@ public class List {
 	private String name;
 	
 	
-	public List() {
+	public ListName() {
 		super();
 	}
 
-	public List(@NotNull String name) {
+	public ListName(@NotNull String name) {
 		super();
 		this.name = name;
 	}
 
-	public List(Long id, @NotNull String name) {
+	public ListName(Long id, @NotNull String name) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -70,7 +70,7 @@ public class List {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		List other = (List) obj;
+		ListName other = (ListName) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
