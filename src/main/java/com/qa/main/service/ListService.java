@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.qa.main.dto.ListDto;
 import com.qa.main.persistence.domain.ListName;
 import com.qa.main.persistence.repo.ListRepo;
+import com.qa.main.utils.SpringBeanUtil;
 
 @Service
 public class ListService {
@@ -46,6 +47,14 @@ public class ListService {
 	}
 	
 	//Update 
+	
+	public ListDto update(ListDto listDto, Long id) {
+		ListName toUpdate = this.repo.findById(id).orElseThrow();
+		
+		toUpdate.setName(listDto.getName());
+		SpringBeanUtil.mergNotNull(listDto, toUpdate);
+		return this.mapToDTO(this.repo.save(toUpdate));
+	}
 	
 	//Delete
 	public boolean delete(Long id) {
