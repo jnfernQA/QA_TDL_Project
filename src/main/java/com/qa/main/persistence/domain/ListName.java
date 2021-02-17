@@ -1,23 +1,37 @@
-package com.qa.main.dto;
+package com.qa.main.persistence.domain;
 
-public class ListDto {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
+@Entity
+public class ListName {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@NotNull
 	private String name;
 	
 	
-	//Default Constructor
-	public ListDto() {
+	public ListName() {
 		super();
 	}
-	
-	public ListDto(Long id, String name) {
+
+	public ListName(@NotNull String name) {
+		super();
+		this.name = name;
+	}
+
+	public ListName(Long id, @NotNull String name) {
 		super();
 		this.id = id;
 		this.name = name;
 	}
 	
-
 	public Long getId() {
 		return id;
 	}
@@ -33,10 +47,10 @@ public class ListDto {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "ListDto [id=" + id + ", name=" + name + "]";
+		return "List [id=" + id + ", name=" + name + "]";
 	}
 
 	@Override
@@ -48,7 +62,6 @@ public class ListDto {
 		return result;
 	}
 
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -57,7 +70,7 @@ public class ListDto {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		ListDto other = (ListDto) obj;
+		ListName other = (ListName) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -69,8 +82,6 @@ public class ListDto {
 		} else if (!name.equals(other.name))
 			return false;
 		return true;
-	}
-	
-	
+	}	
 
 }
