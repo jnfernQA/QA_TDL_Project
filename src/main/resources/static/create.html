@@ -17,12 +17,12 @@
         <div class = "col">
             <div class = "row">
                 <fieldset id = "info">
-                <legend><span class="number"></span> Create a List</legend>
+                <legend><span class="number"></span> List Info</legend>
                 <label for="name">List Name:</label>
                 <input type="text" id="name" name="name">
                 <br>
                 <button type="submit" onclick ="createList()" class="btn btn-light">Create</button>
-               
+                <script src = fetch.js></script>
                 <br>
                 </fieldset>
                 
@@ -30,17 +30,14 @@
             <div class = "row">
                 <fieldset id = "itemInfo">
                 <legend><span class="number"></span> Add Items to Created Lists</legend>
-                <label for ="item_name">Item Name</label>
-                <input type="text" id="item_name" name="item_name">
+                <label for ="itemName">Item Name</label>
+                <input type="text" id="itemName" name="itemName">
                 <br>
-                <label for ="item_action">Item Action</label>
-                <input type="text" id="item_action" name="item_action">
-                <br>
-                <label for ="listName">List Id to store Items</label>
-                <input type="text" id="listName" name="listName">
+                <label for ="itemAction">Item Action</label>
+                <input type="text" id="itemAction" name="itemAction">
                 <br>
                 <button type="submit" onclick ="createItem()" class="btn btn-light">Create</button>
-                
+                <script src = fetch.js></script>
                 <br>
                 </fieldset>
             </div>
@@ -49,7 +46,7 @@
             </fieldset>
         </div>
         <div class ="Back" id = "create">
-            <a href="main.html">
+            <a href="index.html">
                 <h4>Back</h4>
             </a>
         </div>
