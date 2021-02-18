@@ -1,10 +1,17 @@
 package com.qa.main.persistence.domain;
 
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
+
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 @Entity
 public class ListName {
@@ -16,22 +23,27 @@ public class ListName {
 	@NotNull
 	private String name;
 	
+	@OneToMany(mappedBy = "listName", fetch = FetchType.EAGER)
+	@OnDelete(action = OnDeleteAction.CASCADE)
+	private List<Item> item;
 	
 	public ListName() {
 		super();
 	}
 
-	public ListName(@NotNull String name) {
+	public ListName(@NotNull String name, List<Item> item) {
 		super();
 		this.name = name;
+		this.item = item;
 	}
-
-	public ListName(Long id, @NotNull String name) {
+	
+	public ListName(Long id, @NotNull String name, List<Item> item) {
 		super();
 		this.id = id;
 		this.name = name;
+		this.item = item;
 	}
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -47,10 +59,18 @@ public class ListName {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public List<Item> getItem() {
+		return item;
+	}
+
+	public void setItem(List<Item> item) {
+		this.item = item;
+	}
 
 	@Override
 	public String toString() {
-		return "List [id=" + id + ", name=" + name + "]";
+		return "ListName [id=" + id + ", name=" + name + ", item=" + item + "]";
 	}
 
 	@Override
@@ -58,6 +78,7 @@ public class ListName {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((item == null) ? 0 : item.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
@@ -76,12 +97,17 @@ public class ListName {
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
+		if (item == null) {
+			if (other.item != null)
+				return false;
+		} else if (!item.equals(other.item))
+			return false;
 		if (name == null) {
 			if (other.name != null)
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
 		return true;
-	}	
-
+	}
+	
 }
