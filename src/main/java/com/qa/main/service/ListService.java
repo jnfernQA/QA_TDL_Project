@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.qa.main.dto.ListDto;
+import com.qa.main.exceptions.ListNotFoundException;
 import com.qa.main.persistence.domain.ListName;
 import com.qa.main.persistence.repo.ListRepo;
 import com.qa.main.utils.SpringBeanUtil;
@@ -43,16 +44,14 @@ public class ListService {
 	
 	//Read by id
 	public ListDto readById(Long id) {
-		return this.mapToDTO(this.repo.findById(id).orElseThrow(null));
+		return this.mapToDTO(this.repo.findById(id).orElseThrow(ListNotFoundException::new));
 	}
 	
 	//Update 
-	
 	public ListDto update(ListDto listDto, Long id) {
-		ListName toUpdate = this.repo.findById(id).orElseThrow();
-		
+		ListName toUpdate = this.repo.findById(id).orElseThrow(ListNotFoundException::new);
 		toUpdate.setName(listDto.getName());
-		SpringBeanUtil.mergNotNull(listDto, toUpdate);
+		SpringBeanUtil.mergeNotNull(listDto, toUpdate);
 		return this.mapToDTO(this.repo.save(toUpdate));
 	}
 	
@@ -62,7 +61,4 @@ public class ListService {
 			return !this.repo.existsById(id);
 	}
 	
-	
-	
-
 }

@@ -10,7 +10,7 @@ import static org.springframework.beans.BeanUtils.copyProperties;
 
 public class SpringBeanUtil {
 	
-	public static void mergNotNull(Object source, Object target) {
+	public static void mergeNotNull(Object source, Object target) {
 		copyProperties(source,target,getNullPropName(source));
 	}
 	
