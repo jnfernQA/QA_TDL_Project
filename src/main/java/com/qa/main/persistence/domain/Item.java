@@ -21,7 +21,7 @@ public class Item {
 	private String item_action;
 	
 	@ManyToOne
-	private ListName listName;
+	private ListName listName = null;
 	
 	//Constructors
 	public Item() {
