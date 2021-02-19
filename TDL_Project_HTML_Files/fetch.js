@@ -58,7 +58,7 @@ const getData =()=>{
         response.json().then((data)=>console.info(data));
     })
     .catch((err)=>console.error(err))
-    alert(console.log)
+    
 
 }
 
@@ -108,17 +108,16 @@ const updateList =(id, name)=>{
     .catch((err)=> console.error(err));
 }
 
-const updateItem =(id, item_name,item_action, listId)=>{
+const updateItem =(id, item_name,item_action)=>{
 
     const myObj = {
-        "name" : item_name,
-        "action": item_action,
-        "listName":{
-            "id": listId
-        }
+        "item_name" : item_name,
+        "item_action": item_action,
+        
+        
     }
 
-    fetch(`http://localhost:9090/list/create/${id}`,{
+    fetch(`http://localhost:9090/item/create/${id}`,{
         method:`put`,
         headers:{
             "Content-type":"application/json"

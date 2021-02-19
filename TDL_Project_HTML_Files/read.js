@@ -44,8 +44,6 @@ const readAll =()=>{
         
     }).catch((err)=>console.error(err))
     
-    
-
 }
 
 const readAllItems =()=>{
@@ -65,8 +63,6 @@ const readAllItems =()=>{
         
     }).catch((err)=>console.error(err))
     
-    
-
 }
 
 
