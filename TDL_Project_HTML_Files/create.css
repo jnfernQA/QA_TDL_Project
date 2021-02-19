@@ -18,7 +18,7 @@ body{
 
 .back, #displayBox,#diplayboxAll, #info,#itemInfo{
     padding:50px;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-left: -160px;
     text-align: right;
     border-radius:30px

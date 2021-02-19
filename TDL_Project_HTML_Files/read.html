@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="container">
-        <a href="main.html">
+    <a href="main.html">
             <button class="btn btn-light">
                 Back 
             </button>
-        </a>
+    </a>
+    <div class="container">
+        
         <h1>VIEW Lists</h1>
         <div class="row">
             <div class="col">
@@ -23,8 +24,8 @@
                     <div class="col">
                         <div class="crud" id="read">
                             <form action="get">
-                                <label for="carId">
-                                    <h2>Please enter a List id</h2>
+                                <label for="ListId">
+                                    <h2>Please enter an Item id</h2>
                                 </label>
                                 <br>
                                 <input type="text" id="ListId">
@@ -47,6 +48,48 @@
                     <div class="col">
                         <div class="crud" id="read">
                             <button class="link" onclick="readAll()">
+                            <h2>Show all Items </h2>
+                                </button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="crud" id="displayBoxAll">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <div class="crud" id="read">
+                            <form action="get">
+                                <label for="ListId">
+                                    <h2>Please enter a List id</h2>
+                                </label>
+                                <br>
+                                <input type="text" id="ListId">
+                            </form>
+                            <br>
+                            <button class="btn btn-light" onclick="readByItemId()">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="crud" id="displayBox">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <div class="crud" id="read">
+                            <button class="link" onclick="readAllItems()">
                             <h2>Show all Lists </h2>
                                 </button>
                         </div>
@@ -59,8 +102,10 @@
                 </div>
             </div>
         </div>
+        
     </div>
-    <script src="fetch.js"></script>
+   
+    <script src="read.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>

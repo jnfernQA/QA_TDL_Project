@@ -1,5 +1,6 @@
-const ListName = document.querySelector("#name")
+`use strict`
 
+const ListName = document.querySelector("#name")
 function createList(){
     
         let myObj = {
@@ -23,7 +24,7 @@ function createList(){
 const itemName = document.querySelector("#item_name")
 const itemAction = document.querySelector("#item_action")
 const listId = document.querySelector("#listName")
-function createItem(){ 
+function createItem(){
 
     let myObj = {
         item_name : itemName.value,
@@ -57,6 +58,7 @@ const getData =()=>{
         response.json().then((data)=>console.info(data));
     })
     .catch((err)=>console.error(err))
+    alert(console.log)
 
 }
 
