@@ -18,10 +18,13 @@
             <div class = "row">
                 <fieldset id = "info">
                 <legend><span class="number"></span> Update a List</legend>
+                <label for ="ListId">List ID</label>
+                <input type ="text" id="ListId" name="ListId">
+                <br>
                 <label for="name">List Name:</label>
                 <input type="text" id="name" name="name">
                 <br>
-                <button type="submit" onclick ="createList()" class="btn btn-light">Create</button>
+                <button type="submit" onclick ="updateList()" class="btn btn-light">Update</button>
                
                 <br>
                 </fieldset>
@@ -29,18 +32,17 @@
             </div>
             <div class = "row">
                 <fieldset id = "itemInfo">
-                <legend><span class="number"></span> Add Items to Created Lists</legend>
+                <legend><span class="number"></span> Update Items from List</legend>
+                <label for ="ItemId">Item Id</label>
+                <input type="text" id="ItemId" name="ItemId">
+                <br>
                 <label for ="item_name">Item Name</label>
                 <input type="text" id="item_name" name="item_name">
                 <br>
                 <label for ="item_action">Item Action</label>
                 <input type="text" id="item_action" name="item_action">
                 <br>
-                <label for ="listName">List Id to store Items</label>
-                <input type="text" id="listName" name="listName">
-                <br>
-                <button type="submit" onclick ="createItem()" class="btn btn-light">Create</button>
-                
+                <button type="submit" onclick ="updateItem()" class="btn btn-light">Update</button>
                 <br>
                 </fieldset>
             </div>
@@ -54,7 +56,7 @@
             </a>
         </div>
     </div>
-    <script src = fetch.js></script>
+    <script src = update.js></script>
     
 </body>
 </html>
