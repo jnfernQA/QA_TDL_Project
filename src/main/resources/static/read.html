@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Lists</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <a href="index.html">
+            <button class="btn btn-light">
+                Back 
+            </button>
+    </a>
+    <div class="container">
+        
+        <h1>VIEW Lists</h1>
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <div class="crud" id="read">
+                            <form action="get">
+                                <label for="ListId">
+                                    <h2>Please enter an list id</h2>
+                                </label>
+                                <br>
+                                <input type="text" id="ListId">
+                            </form>
+                            <br>
+                            <button class="btn btn-light" onclick="readById()">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="crud" id="displayBox">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <div class="crud" id="read">
+                            <button class="link" onclick="readAll()">
+                            <h2>Show all Lists </h2>
+                                </button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="crud" id="displayBoxAll">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <div class="crud" id="read">
+                            <form action="get">
+                                <label for="ListId">
+                                    <h2>Please enter a Item id</h2>
+                                </label>
+                                <br>
+                                <input type="text" id="ListId">
+                            </form>
+                            <br>
+                            <button class="btn btn-light" onclick="readByItemId()">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="crud" id="displayBox">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <div class="crud" id="read">
+                            <button class="link" onclick="readAllItems()">
+                            <h2>Show all Items </h2>
+                                </button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="crud" id="displayBoxAll">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+   
+    <script src="read.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</body>
+</html>
