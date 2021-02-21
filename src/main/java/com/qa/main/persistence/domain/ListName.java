@@ -30,6 +30,16 @@ public class ListName {
 	public ListName() {
 		super();
 	}
+	
+	
+
+	public ListName(Long id, @NotNull String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+
+
 
 	public ListName(@NotNull String name, List<Item> item) {
 		super();
@@ -43,6 +53,17 @@ public class ListName {
 		this.name = name;
 		this.item = item;
 	}
+	
+	
+
+
+
+	public ListName(@NotNull String name) {
+		super();
+		this.name = name;
+	}
+
+
 
 	public Long getId() {
 		return id;
