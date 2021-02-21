@@ -47,13 +47,13 @@ public class Item {
 
 
 
-	public Item(@NotNull String item_name, @NotNull String item_action, ListName listName) {
-		super();
-		this.item_name = item_name;
-		this.item_action = item_action;
-		this.listName = listName;
-	}
-	
+//	public Item(@NotNull String item_name, @NotNull String item_action, ListName listName) {
+//		super();
+//		this.item_name = item_name;
+//		this.item_action = item_action;
+//		this.listName = listName;
+//	}
+//	
 	public Item(Long id, @NotNull String item_name, @NotNull String item_action, ListName listName) {
 		super();
 		this.id = id;
@@ -62,7 +62,8 @@ public class Item {
 		this.listName = listName;
 	}
 	
-	
+
+
 
 	//Getters and Setters
 	public Long getId() {
