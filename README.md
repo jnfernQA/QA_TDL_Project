@@ -37,7 +37,7 @@ What things you need to install the software and how to install them
 
 Explain how to run the automated tests for this system. Break down into which tests and what they do
 
-### Unit Tests 
+### Unit and Integration Tests 
 
 These Tests make sure the base code does what it requires to do and does a coverage test to compare expected result to actual results
 using JUnit and mockito
