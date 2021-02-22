@@ -13,7 +13,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-1.MySQL database 
+1.MySQL database (Create "list" database first)
 2.JDK 11 and Eclipse IDE or Spring (IDE) (preferbly Spring)
 3.JUnit5, Mockito, Selenium (included in Spring for testing)
 4.Google Chrome Version 88.0.4324.182
@@ -37,7 +37,7 @@ What things you need to install the software and how to install them
 
 Explain how to run the automated tests for this system. Break down into which tests and what they do
 
-### Unit and Integration Tests 
+### Unit and Integration Tests and User Acceptance
 
 These Tests make sure the base code does what it requires to do and does a coverage test to compare expected result to actual results
 using JUnit and mockito
@@ -45,6 +45,7 @@ using JUnit and mockito
 ```
 1.In the src/test/java you can run a coverage test
 2. Can modify tests 
+3. Run JUnit test on fronEndtest while application is running
 ```
 
 ## Deployment
