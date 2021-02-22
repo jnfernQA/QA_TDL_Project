@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    margin-top: 30px;
+    text-size-adjust:100%
+}
+
+h2{
+    margin-top : 20px;
+}
+
+p1{
+    font-size: 3.5mm;
+}
+
+body{
+    background-color: rgb(127, 229, 255);
+}
+
+.back, #displayBox,#diplayboxAll, #info,#itemInfo{
+    padding:50px;
+    margin-top: 5px;
+    margin-left: -160px;
+    text-align: right;
+    border-radius:30px
+}
+
+
