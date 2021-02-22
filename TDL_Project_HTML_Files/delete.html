@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>Delete</title>
+</head>
+<br>
+<br>
+<br>
+<br>
+<body class="container">
+  <a href="main.html">
+    <button class="btn btn-light">
+        Back
+    </button>
+</a>
+    <!-- <form class="row g-3"> -->
+        <h1>Delete a List or an Item</h1>
+        <p>Enter List ID</p>
+        <div class="col-auto">
+          <input type="text" class="form-control" id="ListId" placeholder="ID">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-lg btn-primary" onclick="deleteById()">Confirm</button>
+        </div>
+        <p>Enter Item Id</p>
+        <div class="col-auto">
+          <input type="text" class="form-control" id="ItemId" placeholder="ID">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-lg btn-primary" onclick="deleteItemById()">Confirm</button>
+        </div>
+    <script src="delete.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
