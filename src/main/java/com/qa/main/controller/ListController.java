@@ -48,6 +48,7 @@ public class ListController {
 		return ResponseEntity.ok(this.service.readById(id));
 	}
 	
+	//Update
 	@PutMapping("/create/{id}")
 	public ResponseEntity<ListDto> update(@PathVariable Long id, @RequestBody ListDto listDto){
 		return new ResponseEntity<>(this.service.update(listDto,  id), HttpStatus.ACCEPTED);

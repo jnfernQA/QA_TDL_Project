@@ -17,7 +17,7 @@ function createList(){
         .then(res => res.json())
         .then((data) => console.log(`Request succeeded with JSON response ${data}`))
         .catch((err) => console.log(err))
-        alert("List Created")
+        
      
 }
 
@@ -44,7 +44,7 @@ function createItem(){
     .then(res => res.json())
     .then((data) => console.log(`Request succeeded with JSON response ${data}`))
     .catch((err) => console.log(err))
-    alert("Item Created")
+    
      
 }
 
