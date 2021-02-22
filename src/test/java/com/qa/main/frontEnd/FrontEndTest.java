@@ -6,6 +6,7 @@ import java.util.Map;
 
 
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -14,12 +15,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
 public class FrontEndTest {
 	private static RemoteWebDriver driver;
 	private static WebElement targ;
+	private static ExtentReports report;
+	private static ExtentTest test;
 	
 	@Test
 	public void updateTest() throws Exception{
+		test = report.startTest("Test For List update");
+		test.log(LogStatus.INFO, "List updated");
 		driver.get("http://localhost:9090/update.html");
 		
 		System.out.println("Updating List");
@@ -41,6 +50,8 @@ public class FrontEndTest {
 	
 	@Test
 	public void readByIdTest() throws Exception{
+		test = report.startTest("Test For List read");
+		test.log(LogStatus.INFO, "List read");
 		driver.get("http://localhost:9090/read.html");
 		
 		
@@ -58,6 +69,8 @@ public class FrontEndTest {
 	
 	@Test
 	public void testCreate() throws InterruptedException {
+		test = report.startTest("Test For List created");
+		test.log(LogStatus.INFO, "List created");
 		
 		driver.get("http://localhost:9090/create.html");
 		
@@ -86,6 +99,8 @@ public class FrontEndTest {
 	
 	@Test
 	public void deleteTest() {
+		test = report.startTest("Test For List deleted");
+		test.log(LogStatus.INFO, "List deleted");
 		driver.get("http://localhost:9090/delete.html");
 		System.out.println("Deleting List");
 		
@@ -102,6 +117,8 @@ public class FrontEndTest {
 	@BeforeAll
 	public static void setUp() {
 		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+		report = new ExtentReports("C:\\Users\\Admin\\Desktop\\QA-TDL-Project\\QA_TDL_Project\\target\\reports\\extendreports\\endreportswebtestreport.html",
+				true);
 		
 		driver = new ChromeDriver();
 	}
@@ -111,6 +128,11 @@ public class FrontEndTest {
 		driver.quit();
 		
 		System.out.println("Driver is closed");
+	}
+	
+	@AfterEach
+	public void afterTest() {
+		report.endTest(test);
 	}
 	
 	

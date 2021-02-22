@@ -41,11 +41,11 @@ public class ListName {
 
 
 
-//	public ListName(@NotNull String name, List<Item> item) {
-//		super();
-//		this.name = name;
-//		this.item = item;
-//	}
+	public ListName(@NotNull String name, List<Item> item) {
+		super();
+		this.name = name;
+		this.item = item;
+	}
 	
 	public ListName(Long id, @NotNull String name, List<Item> item) {
 		super();
